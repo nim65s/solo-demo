@@ -24,7 +24,6 @@ ExternalProject_Add("hpp-fcl"
   CMAKE_ARGS ${META_CMAKE_ARGS} ${JRL_CMAKE_ARGS})
 ExternalProject_Add("pinocchio"
   GIT_REPOSITORY "https://github.com/stack-of-tasks/pinocchio"
-  GIT_TAG "devel"
   DEPENDS "hpp-fcl"
   CMAKE_ARGS ${META_CMAKE_ARGS} ${JRL_CMAKE_ARGS})
 ExternalProject_Add("eiquadprog"
