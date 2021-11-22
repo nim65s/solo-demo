@@ -48,5 +48,5 @@ ExternalProject_Add("odri_control_interface"
 ExternalProject_Add("quadruped-reactive-walking"
   GIT_REPOSITORY "https://gitlab.laas.fr/gsaurel/quadruped-reactive-walking"
   GIT_TAG "demo-raspberry"
-  DEPENDS "odri_control_interface" "osqp" "eiquadprog" "pinocchio"
+  DEPENDS "odri_control_interface" "osqp" "eiquadprog" "pinocchio" "example-robot-data"
   CMAKE_ARGS ${META_CMAKE_ARGS})
