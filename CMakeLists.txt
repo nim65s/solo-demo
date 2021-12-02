@@ -10,10 +10,16 @@ set(META_CMAKE_ARGS
   -DCMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}
   -DCMAKE_CXX_COMPILER_LAUNCHER=${CMAKE_CXX_COMPILER_LAUNCHER}
   -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
-  -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
-  )
-set(JRL_CMAKE_ARGS -DPYTHON_STANDARD_LAYOUT=ON -DPYTHON_DEB_LAYOUT=ON -DPYTHON_EXECUTABLE=/usr/bin/python3 -DBUILD_TESTING=OFF)
-set(OSQP_CMAKE_ARGS -DPRINTING=OFF -DPROFILING=OFF -DDLONG=OFF)
+  -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX})
+set(JRL_CMAKE_ARGS
+  -DPYTHON_STANDARD_LAYOUT=ON
+  -DPYTHON_DEB_LAYOUT=ON
+  -DPYTHON_EXECUTABLE=/usr/bin/python3
+  -DBUILD_TESTING=OFF)
+set(OSQP_CMAKE_ARGS
+  -DPRINTING=OFF
+  -DPROFILING=OFF
+  -DDLONG=OFF)
 
 ExternalProject_Add("eigenpy"
   GIT_REPOSITORY "https://github.com/stack-of-tasks/eigenpy"
@@ -46,7 +52,7 @@ ExternalProject_Add("odri_control_interface"
   DEPENDS "master-board" "eigenpy"
   CMAKE_ARGS ${META_CMAKE_ARGS} ${JRL_CMAKE_ARGS})
 ExternalProject_Add("quadruped-reactive-walking"
-  GIT_REPOSITORY "https://gitlab.laas.fr/gsaurel/quadruped-reactive-walking"
+  GIT_REPOSITORY "https://github.com/gsaurel/quadruped-reactive-walking"
   GIT_TAG "demo-raspberry"
   DEPENDS "odri_control_interface" "osqp" "eiquadprog" "pinocchio" "example-robot-data"
   CMAKE_ARGS ${META_CMAKE_ARGS})
