@@ -22,9 +22,7 @@ sudo systemctl restart zramswap
 sudo chown -R pi /usr/local
 sudo python3 -m pip install inputs
 
-#sudo apt install libtinfo5 --reinstall
-
-git clone https://gitlab.laas.fr/open-dynamic-robot-initiative/solo-demo.git
+git clone https://github.com/nim65s/solo-demo.git
 mkdir solo-demo/build
 cd solo-demo/build || exit 1
 cmake -DCMAKE_BUILD_TYPE=Release ..
