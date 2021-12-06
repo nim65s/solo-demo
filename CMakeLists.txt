@@ -52,7 +52,7 @@ ExternalProject_Add("odri_control_interface"
   DEPENDS "master-board" "eigenpy"
   CMAKE_ARGS ${META_CMAKE_ARGS} ${JRL_CMAKE_ARGS})
 ExternalProject_Add("quadruped-reactive-walking"
-  GIT_REPOSITORY "https://github.com/gsaurel/quadruped-reactive-walking"
+  GIT_REPOSITORY "https://github.com/nim65s/quadruped-reactive-walking"
   GIT_TAG "demo-raspberry"
   DEPENDS "odri_control_interface" "osqp" "eiquadprog" "pinocchio" "example-robot-data"
   CMAKE_ARGS ${META_CMAKE_ARGS})
