@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eux
 
 sudo apt update -qqy
 sudo apt upgrade -qqy
